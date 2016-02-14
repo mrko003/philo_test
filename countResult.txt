@@ -1,0 +1,16 @@
+=====Hannah_Arendt.html=======
+168 10 0 0 0 0 0 2
+=====Martin_Heidegger.html=======
+14 433 0 0 5 11 8 0
+=====Michelde_Montaigne.html=======
+0 0 146 0 2 0 1 1
+=====Niccolò_Machiavelli.html=======
+0 0 2 297 1 4 4 1
+=====René_Descartes.html=======
+0 12 1 0 271 4 6 0
+=====a_Aristotle.html=======
+0 2 0 0 2 325 32 5
+=====a_Plato.html=======
+0 2 0 2 3 27 434 57
+=====a_Socrates.html=======
+0 0 0 0 0 16 98 248
