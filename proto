@@ -1,0 +1,39 @@
+#!/bin/bash
+
+Resultpath=$HOME/Philo_Perse/countResult.txt
+
+rm $Resultpath
+
+Listpath=$HOME/Philo_Perse/list.txt
+num=0
+
+while read path
+do
+    phname=$(basename $path)
+    phname=${phname%.html}
+    phname=`echo $phname | cut -d "_" -f 2`
+    arr[$num]=$phname
+    num=`expr $num + 1`
+done < $Listpath
+numAll=`expr $num - 1`
+#echo ${arr[@]}
+
+while read path
+do
+    for num in `seq 0 $numAll`
+    do
+         count[$num]=0
+    done
+    while read line
+    do
+        for num in `seq 0 $numAll`
+        do
+            if echo $line | grep -q ${arr[$num]} ; then
+               count[$num]=`expr ${count[$num]} + 1` 
+            fi
+        done
+    done < $path
+    echo =====$(basename $path)======= >> $Resultpath 
+    echo ${count[@]} >> $Resultpath
+    #echo ${count[@]}
+done < $Listpath
